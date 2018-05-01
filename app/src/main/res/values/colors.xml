@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Values of colors used for the ui of the app-->
+    <color name="colorPrimary">#880E4F</color>
+    <color name="colorSecondary">#880E4F</color>
+    <color name="colorTextHint">#03A9F4</color>
+    <color name="editorColorPrimary">#9C27B0</color>
+    <color name="editorColorPrimaryDark">#9C27B0</color>
+    <color name="editorColorAccent">#880E4F</color>
+    <color name="colorTextPrimary">#311B92</color>
+    <color name="colorTextSecondary">#03A9F4</color>
+    <color name="colorTitle">#000000</color>
+    <color name="colorSubTitle">#607D8B</color>
+    <color name="colorMainBackground">#FCE4EC</color>
+    <color name="colorEditorBackground">#F3E5F5</color>
+    <color name="colorListBackground">#FFF3E0</color>
+</resources>

@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">Cake Inventory</string>
+
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">The store is empty..</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a pet [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Let\'s start by adding a cake ! </string>
+
+    <!-- Title for the activity to add a new cake [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_cake">Add a Cake</string>
+
+    <!-- Title for the activity to edit an existing cake [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_edit_cake">Edit Cake</string>
+
+    <!-- Label for overflow menu option that inserts fake cake data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for editor menu option to save cake and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current cake [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Toast message in editor when new cake has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_cake_successful">Cake saved</string>
+
+    <!-- Toast message in editor when new cake has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_cake_failed">Error with saving cake</string>
+
+    <!-- Toast message in editor when current cake was successfully updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_cake_successful">Cake updated</string>
+
+    <!-- Toast message in editor when current cake has failed to be updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_cake_failed">Error with updating cake</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current cake [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_cake">Cake</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_cake_name">Name of the Cake</string>
+
+    <!-- Label for shape information in the editor [CHAR LIMIT=30] -->
+    <string name="category_shape">Shape</string>
+
+    <!-- Label for dropdown menu option if the cake's shape is ring [CHAR LIMIT=20] -->
+    <string name="shape_ring">Ring</string>
+
+    <!-- Label for dropdown menu option if the cake's shape is round [CHAR LIMIT=20] -->
+    <string name="shape_round">Round</string>
+
+    <!-- Label for dropdown menu option if the  cake's shape is square [CHAR LIMIT=20] -->
+    <string name="shape_square">Square</string>
+
+    <!-- Label for dropdown menu option if the cake's shape is unknown [CHAR LIMIT=20] -->
+    <string name="shape_unknown">Unknown</string>
+
+    <!-- Label for quantity information in the editor  -->
+    <string name="category_quantity">Quantity in store</string>
+
+    <!-- Text hint for quantity field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_cake_quantity">5</string>
+
+    <!-- Label for price information in the editor  -->
+    <string name="category_price">Price per item</string>
+
+    <!-- Text hint for price field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_cake_price">9</string>
+
+    <!-- Label for description information in the editor  -->
+    <string name="category_description">Description</string>
+
+    <!-- Text hint for description field in the editor [CHAR LIMIT=50] -->
+    <string name="hint_cake_description">describe the cake</string>
+
+    <!-- Label for supplier's name field in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier">Supplier\'s name</string>
+
+    <!-- Text hint for supplier's name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_cake_supplier">Ino</string>
+
+    <!-- Label for supplier's phone field in the editor [CHAR LIMIT=30] -->
+    <string name="category_phone">Supplier\'s phone</string>
+
+    <!-- Text hint for supplier's phone field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_supplier_phone">12345</string>
+
+    <!-- Toast message in editor when current cake was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_cake_successful">Cake deleted</string>
+
+    <!-- Toast message in editor when current cake has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_cake_failed">Error with deleting cake</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current cake [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this cake?</string>
+
+    <!-- Dialog message to ask the user to confirm deleting all cakes [CHAR LIMIT=NONE] -->
+    <string name="delete_all_dialog_msg">Delete all cakes ?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current cake [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current cake [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+
+    <!-- Label for overflow menu option that deletes all cakes data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Cakes</string>
+
+    <!--Text for the sale button-->
+    <string name="sale_button_text">SALE</string>
+
+    <!--Description of the store image-->
+    <string name="content_description">The image shows an empty cake store</string>
+
+    <!--Label for the minus button-->
+    <string name="minus_button">-</string>
+
+    <!--Number for the default value of the quantity-->
+    <string name="default_quantity">0</string>
+
+    <!--Label for the plus button-->
+    <string name="plus_button">+</string>
+
+    <!--Label for the contact supplier button-->
+    <string name="contact_supplier_button">Contact Supplier</string>
+
+    <!--Text to be shown if price isn't fixed-->
+    <string name="ask_price">Ask for a price</string>
+
+    <!-- String values for the dummy data-->
+    <string name="choco">Chocolate Cake</string>
+    <string name="cake_price">9</string>
+    <string name="cake_quantity">5</string>
+    <string name="cake_supplier">Ino</string>
+    <string name="supplier_phone">12345</string>
+    <string name="cake_descr">A cake made with cocoa filling</string>
+
+    <!--Text for the toast message to indicate that cake is sold out. -->
+    <string name="sold_out">Cake is sold out !</string>
+</resources>

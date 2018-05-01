@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin around the floating action button in CatalogActivity -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Common margin value used throughout the app -->
+    <dimen name="activity_margin">16dp</dimen>
+
+    <!--Common size-->
+    <dimen name="size">48dp</dimen>
+
+    <!--Padding size for a button-->
+    <dimen name="padding">8dp</dimen>
+
+    <!--Padding size for left side space-->
+    <dimen name="padding_left">24dp</dimen>
+
+    <!-- Padding size for top space-->
+    <dimen name="padding_top">27dp</dimen>
+
+    <!-- Height size for the empty view image-->
+    <dimen name="height">240dp</dimen>
+</resources>

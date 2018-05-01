@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/colorEditorBackground"
+    tools:context=".EditorActivity">
+
+    <!-- Cake Information -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_cake" />
+
+        <EditText
+            android:id="@+id/edit_cake_name"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_cake_name"
+            android:inputType="textCapSentences" />
+    </LinearLayout>
+
+    <!--Shape of cake section-->
+    <LinearLayout
+        android:id="@+id/container_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            android:text="@string/category_shape"
+            style="@style/CategoryStyle" />
+
+        <!-- Input field -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Shape drop-down spinner -->
+            <Spinner
+                android:id="@+id/spinner_shape"
+                android:layout_height="@dimen/size"
+                android:layout_width="wrap_content"
+                android:paddingRight="@dimen/activity_margin"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_price" />
+
+        <!-- Price field -->
+        <EditText
+            android:id="@+id/edit_cake_price"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_cake_price"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <!-- Quantity information -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_quantity" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_margin">
+
+            <Button
+                android:id="@+id/edit_remove_item_button"
+                style="@style/quantity_button"
+                android:layout_width="52dp"
+                android:text="@string/minus_button" />
+
+            <TextView
+                android:id="@+id/edit_cake_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_quantity"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/edit_add_item_button"
+                style="@style/quantity_button"
+                android:text="@string/plus_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_supplier" />
+
+        <EditText
+            android:id="@+id/edit_cake_supplier"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_cake_supplier"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_phone" />
+
+        <EditText
+            android:id="@+id/edit_supplier_phone"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_supplier_phone"
+            android:inputType="phone"
+            android:maxLength="16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_description" />
+
+        <EditText
+            android:id="@+id/edit_cake_description"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_cake_description"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/call_supplier_button"
+        android:text="@string/contact_supplier_button" />
+</LinearLayout>
