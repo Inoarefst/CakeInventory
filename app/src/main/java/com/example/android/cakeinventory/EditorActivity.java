@@ -83,7 +83,7 @@ public class EditorActivity extends AppCompatActivity implements
     private Button mItemAddButton;
 
     // variable for the cake quantity
-    private int cakeQuantity = 0;
+    int cakeQuantity ;
 
     /**
      * EditText field to enter the cake's shape
@@ -221,32 +221,24 @@ public class EditorActivity extends AppCompatActivity implements
 
             }
         });
-        // Handles button for increasing quantity
+
         mItemAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cakeQuantity < MAX_ITEM) {
-                    cakeQuantity++;
-                    displayQuantity();
-                }
+                IncQuantity();
             }
         });
-        // Handles button for decreasing quantity
         mItemRemoveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cakeQuantity > 0) {
-                    cakeQuantity--;
-                } else if (cakeQuantity == 0) {
-                    mItemRemoveButton.setEnabled(false);
-                }
-                displayQuantity();
+                DecQuantity();
             }
         });
     }
 
     /**
      * Get user input from editor and save cake into database.
+     * @return boolean that indicates if the Activity may finish.
      */
     private void saveCake() {
         // Read from input fields
@@ -264,9 +256,31 @@ public class EditorActivity extends AppCompatActivity implements
                 TextUtils.isEmpty(nameString) && TextUtils.isEmpty(priceString) &&
                 TextUtils.isEmpty(quantityString) && TextUtils.isEmpty(supplierString) &&
                 TextUtils.isEmpty(phoneString) && TextUtils.isEmpty(descriptionString) &&
-                mShape == CakeEntry.SHAPE_UNKNOWN) {
-            // Since no fields were modified, we can return early without creating a new cake.
-            // No need to create ContentValues and no need to do any ContentProvider operations.
+                mShape == CakeEntry.SHAPE_UNKNOWN){
+            Toast.makeText(this, getString(R.string.toast_all_fields_empty),
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+            // check all edit text and quantity field
+        if (TextUtils.isEmpty(nameString)) {
+            Toast.makeText(this, R.string.toast_missing_cake_name, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(priceString)) {
+            Toast.makeText(this, R.string.toast_missing_cake_price, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(supplierString)) {
+            Toast.makeText(this, R.string.toast_missing_supplier_name, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(phoneString)) {
+            Toast.makeText(this, R.string.toast_missing_supplier_phone_number, Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(descriptionString)) {
+            Toast.makeText(this, R.string.toast_missing_cake_description, Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -320,8 +334,24 @@ public class EditorActivity extends AppCompatActivity implements
                 Toast.makeText(this, getString(R.string.editor_update_cake_successful),
                         Toast.LENGTH_SHORT).show();
             }
+            finish();
         }
     }
+
+    public void IncQuantity() {
+        cakeQuantity = Integer.valueOf(mQuantityEditText.getText().toString().trim());
+        cakeQuantity = cakeQuantity + 1;
+        mQuantityEditText.setText(String.valueOf(cakeQuantity));
+    }
+
+    public void DecQuantity() {
+        cakeQuantity = Integer.valueOf(mQuantityEditText.getText().toString().trim());
+        if (cakeQuantity > 0) {
+            cakeQuantity = cakeQuantity - 1;
+            mQuantityEditText.setText(String.valueOf(cakeQuantity));
+        }else if (cakeQuantity == 0) {
+                mItemRemoveButton.setEnabled(false);
+            }}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -386,11 +416,6 @@ public class EditorActivity extends AppCompatActivity implements
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    // method for displaying the current quantity value
-    private void displayQuantity() {
-        mQuantityEditText.setText(String.valueOf(cakeQuantity));
     }
 
     /**
