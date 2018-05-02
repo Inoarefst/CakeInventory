@@ -146,4 +146,12 @@
 
     <!--Text for the toast message to indicate that cake is sold out. -->
     <string name="sold_out">Cake is sold out !</string>
+    
+    <!--Toast messages allerting user not to save empty fields in the editor activity-->
+    <string name="toast_all_fields_empty">You should not save an empty cake !</string>
+    <string name="toast_missing_cake_name">You should insert a name for the cake .</string>
+    <string name="toast_missing_cake_price">You should insert a price for the ccake .</string>
+    <string name="toast_missing_supplier_name">You should insert a name for the supplier of the cake .</string>
+    <string name="toast_missing_supplier_phone_number">You should insert a phone number for the supplier .</string>
+    <string name="toast_missing_cake_description">You should insert a description for the cake .</string>
 </resources>

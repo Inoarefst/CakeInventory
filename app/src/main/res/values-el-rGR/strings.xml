@@ -53,4 +53,10 @@
     <string name="supplier_phone">12345</string>
     <string name="cake_descr">Ένα κέικ φτιαγμένο με γέμιση από κακάο</string>
     <string name="sold_out">Το κέικ εξαντλήθηκε !</string>
+    <string name="toast_all_fields_empty">Δεν πρέπει να αποθηκεύσετε ένα άδειο κέικ</string>
+    <string name="toast_missing_cake_name">θα πρέπει να προσθέσετε ένα όνομα για το κέικ</string>
+    <string name="toast_missing_cake_price">θα πρέπει να  προσθέσετε μία τιμή για το κέικ</string>
+    <string name="toast_missing_supplier_name">Θα πρέπει να προσθέσετε ένα όνομα για τον προμηθευτή του κέικ</string>
+    <string name="toast_missing_supplier_phone_number">Θα πρέπει να προσθέσετε ένα τηλέφωνο για τον προμηθευτή του κέικι</string>
+    <string name="toast_missing_cake_description">Θα πρέπει να προσθέσετε μία περιγραφή για το κέικ</string>
 </resources>
